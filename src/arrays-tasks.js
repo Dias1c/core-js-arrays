@@ -69,7 +69,9 @@ function sumArrays(arr1, arr2) {
  *    findElement(['Array', 'Number', 'string'], 'Date') => -1
  *    findElement([0, 1, 2, 3, 4, 5], 5) => 5
  */
-const findElement = (arr, value) => arr.findIndex((v) => v === value);
+function findElement(arr, value) {
+  return Array.from(arr).indexOf(value);
+}
 
 /**
  * Returns a number of all occurrences of the specified item in an array.
@@ -85,8 +87,9 @@ const findElement = (arr, value) => arr.findIndex((v) => v === value);
  *    findAllOccurrences([ null, undefined, null ], null) => 2
  *    findAllOccurrences([ true, 0, 1, 'true' ], true) => 1
  */
-const findAllOccurrences = (arr, item) =>
-  arr.reduce((res, el) => (el === item ? res + 1 : res), 0);
+const findAllOccurrences = (arr, item) => {
+  return Array.from(arr).reduce((res, el) => (el === item ? res + 1 : res), 0);
+};
 
 /**
  * Removes falsy values from the specified array.
@@ -100,8 +103,9 @@ const findAllOccurrences = (arr, item) =>
  *    removeFalsyValues([ 1, 2, 3, 4, 5, 'false' ]) => [ 1, 2, 3, 4, 5, 'false' ]
  *    removeFalsyValues([ false, 0, NaN, '', undefined ]) => [ ]
  */
-const removeFalsyValues = (arr) => arr.filter((v) => !!v);
-
+function removeFalsyValues(arr) {
+  return Array.from(arr).filter((v) => !!v);
+}
 /**
  * Returns an array containing the lengths of each string in a specified array of strings.
  *
