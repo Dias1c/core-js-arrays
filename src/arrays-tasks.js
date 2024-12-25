@@ -85,9 +85,8 @@ const findElement = (arr, value) => arr.findIndex((v) => v === value);
  *    findAllOccurrences([ null, undefined, null ], null) => 2
  *    findAllOccurrences([ true, 0, 1, 'true' ], true) => 1
  */
-function findAllOccurrences(/* arr, item */) {
-  throw new Error('Not implemented');
-}
+const findAllOccurrences = (arr, item) =>
+  arr.reduce((res, el) => (el === item ? res + 1 : res), 0);
 
 /**
  * Removes falsy values from the specified array.
