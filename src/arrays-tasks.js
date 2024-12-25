@@ -100,9 +100,7 @@ const findAllOccurrences = (arr, item) =>
  *    removeFalsyValues([ 1, 2, 3, 4, 5, 'false' ]) => [ 1, 2, 3, 4, 5, 'false' ]
  *    removeFalsyValues([ false, 0, NaN, '', undefined ]) => [ ]
  */
-function removeFalsyValues(/* arr */) {
-  throw new Error('Not implemented');
-}
+const removeFalsyValues = (arr) => arr.filter((v) => !!v);
 
 /**
  * Returns an array containing the lengths of each string in a specified array of strings.
