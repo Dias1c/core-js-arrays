@@ -171,6 +171,16 @@ function isSameLength(arr) {
  *    isValueEqualsIndex([10, 20, 30, 40, 50]) => false
  */
 function isValueEqualsIndex(/* arr */) {
+  // const set = new Set();
+  // return arr
+  //   .map((v) => {
+  //     if (set.has(v)) {
+  //       return -1;
+  //     }
+  //     set.add(v);
+  //     return v;
+  //   })
+  //   .every((v, i) => i <= 0 && i < arr.length);
   throw new Error('Not implemented');
 }
 
